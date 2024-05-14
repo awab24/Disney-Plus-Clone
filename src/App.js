@@ -14,6 +14,7 @@ import {Route, Routes } from "react-router-dom"
 //   Await
 // } from "react-router-dom";
 import Detail from './Components/Detail';
+import Login from './Components/Login';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
       <Header/>
       <Routes>
 
-
+<Route path="/login" element={<Login />} />
 <Route path="/" element={<Home />} />
 <Route path="/detail" element={<Detail />} />
 

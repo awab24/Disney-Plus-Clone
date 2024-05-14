@@ -35,6 +35,12 @@ function Movies() {
 <Wrap>
     <img src="/Disney Clone Challenge/images/simpsons.jpg"/>
 </Wrap>
+<Wrap>
+    <img src="/Disney Clone Challenge/images/simpsons.jpg"/>
+</Wrap>
+<Wrap>
+    <img src="/Disney Clone Challenge/images/simpsons.jpg"/>
+</Wrap>
       </Content>
     </Container>
   )
