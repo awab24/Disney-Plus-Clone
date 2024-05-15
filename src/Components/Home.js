@@ -1,9 +1,26 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import ImgSlider from './ImgSlider';
 import Viewers from './Viewers';
 import Movies from './Movies';
+
+
+import { db, collection, getDocs } from '../firebase'; // Adjust the path as needed
+
+// import db from './firebase'
 function Home() {
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const moviesCollection = collection(db, 'movies');
+      const snapshot = await getDocs(moviesCollection);
+      const moviesList = snapshot.docs.map(doc => doc.data());
+      console.log(moviesList);
+    };
+
+    fetchData();
+  }, []);
+   
   return (
 
       <Container >
